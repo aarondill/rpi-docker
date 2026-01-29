@@ -1,7 +1,7 @@
 # Pi-hole configuration file (v6.4.1)
 # Encoding: UTF-8
 # This file is managed by pihole-FTL
-# Last updated on 2026-01-29 03:09:58 CST
+# Last updated on 2026-01-29 17:50:12 CST
 
 [dns]
   # Upstream DNS Servers to be used by Pi-hole. If this is not set, Pi-hole will not
@@ -663,7 +663,7 @@
     #
     # Allowed values are:
     #     true or false
-    active = true
+    active = false ### CHANGED (env), default = true
 
     # IPv4 address to listen on for NTP requests
     #
@@ -676,7 +676,7 @@
     #
     # Allowed values are:
     #     true or false
-    active = true
+    active = false ### CHANGED (env), default = true
 
     # IPv6 address to listen on for NTP requests
     #
@@ -689,7 +689,7 @@
     #
     # Allowed values are:
     #     true or false
-    active = true
+    active = false ### CHANGED (env), default = true
 
     # NTP upstream server to sync with, e.g., "pool.ntp.org". Note that the NTP server
     # should be located as close as possible to you in order to minimize the time offset
@@ -1678,7 +1678,10 @@
   all = false
 
 # Configuration statistics:
-# 162 total entries out of which 146 entries are default
-# --> 16 entries are modified
-# 1 entry is forced through environment:
+# 162 total entries out of which 143 entries are default
+# --> 19 entries are modified
+# 4 entries are forced through environment:
 #   - dns.listeningMode
+#   - ntp.ipv4.active
+#   - ntp.ipv6.active
+#   - ntp.sync.active
