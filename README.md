@@ -58,8 +58,13 @@ Tailscale is a zero-config VPN that works on any device.
 
 ```shell
 curl -fsSL https://tailscale.com/install.sh | sh # installs tailscale from package manager
-sudo tailscale up --advertise-exit-node # starts tailscale and logs in
+sudo tailscale up # starts tailscale and logs in
+# allows exit node and use of local network
+sudo tailscale set --advertise-exit-node
 ```
+
+Note: to use the local network when using exit node, run `sudo tailscale set --advertise-routes 10.0.0.0/25` (with your subnet), but _Don't_ approve the route in the UI.
+This will make the route work when using exit node, but not normally.
 
 Make sure to go to [machines](https://login.tailscale.com/admin/machines) and select `Disable key expiry` next to the device!
 
