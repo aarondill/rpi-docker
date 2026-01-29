@@ -6,4 +6,6 @@ An attempt to containerize my Raspberry Pi setup.
 
 1. Install Docker and Docker Compose
 2. Clone this repo
-3. Run `docker-compose up`
+3. Configure environment variables in `.env` (see `.env.example`)
+4. Run `./start.sh` to start all the containers
+   - You can also run `docker-compose up` in each directory to start some of the containers
