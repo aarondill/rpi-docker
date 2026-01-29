@@ -59,8 +59,9 @@ Tailscale is a zero-config VPN that works on any device.
 ```shell
 curl -fsSL https://tailscale.com/install.sh | sh # installs tailscale from package manager
 sudo tailscale up # starts tailscale and logs in
-# allows exit node and use of local network
-sudo tailscale set --advertise-exit-node
+sudo tailscale set --advertise-exit-node # allows exit node
+# Enable port forwarding for exit node
+printf '%s\n' 'net.ipv4.ip_forward = 1' 'net.ipv6.conf.all.forwarding = 1' | sudo tee /etc/sysctl.d/99-tailscale.conf && sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
 ```
 
 Note: to use the local network when using exit node, run `sudo tailscale set --advertise-routes 10.0.0.0/25` (with your subnet), but _Don't_ approve the route in the UI.
