@@ -22,6 +22,8 @@ This can't be containerized because it modifies the host file system.
 
 The fstab entry attempts to mount the drive at boot time. The udev rule will run when the drive is plugged in to mount it using systemd.
 
+Restart the system after making changes to `/etc/fstab`.
+
 Replace `<DRIVE UUID>` with the UUID of the drive you want to mount (from `blkid`).
 
 ```shell
@@ -46,6 +48,7 @@ ACTION=="add", SUBSYSTEM=="block", ENV{ID_FS_UUID}="<DRIVE UUID>", RUN+="/usr/bi
 The NFS container doesn't seem to work due to the required kernel modules.
 
 Install NFS on the host machine and configure `/etc/exports` to export the `/backup` directory.
+Then run `sudo exportfs -a` to export the directory.
 
 ```
 # /etc/exports
