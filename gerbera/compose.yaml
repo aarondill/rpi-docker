@@ -1,0 +1,14 @@
+---
+services:
+  gerbera:
+    image: gerbera/gerbera
+    container_name: gerbera
+    network_mode: host
+    volumes:
+      - ./.cache:/var/run/gerbera
+      - ./config.xml:/var/run/gerbera/config.xml
+      - ${MEDIA_ROOT}:/mnt/content:ro
+
+volumes:
+  gerbera-config:
+    external: false
