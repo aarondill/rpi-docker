@@ -7,8 +7,9 @@ if [[ "${#files[@]}" -eq 0 ]]; then
   exit 1
 fi
 
-args=()
 for file in "${files[@]}"; do
-  args+=(-f "$file")
+  dir="$(dirname -- "$file")"
+  pushd "$dir" || continue
+  docker compose up -d
+  popd
 done
-docker compose "${args[@]}" up -d
