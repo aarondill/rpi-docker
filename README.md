@@ -62,3 +62,13 @@ sudo tailscale up --advertise-exit-node # starts tailscale and logs in
 ```
 
 Make sure to go to [machines](https://login.tailscale.com/admin/machines) and select `Disable key expiry` next to the device!
+
+### Optionally, also set [dns settings](https://login.tailscale.com/admin/dns) to route to the Pi Hole.
+
+1. Copy the Tailscale IP from the Pi Hole [machine page](https://login.tailscale.com/admin/machines)
+2. Set `Global nameservers` to the copied IP
+   1. Add nameserver -> custom
+   2. Paste
+   3. Optionally `Use with exit node`
+   4. Save
+3. Enable `Override DNS servers` to make sure clients use the new DNS settings
