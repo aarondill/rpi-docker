@@ -51,3 +51,14 @@ Install NFS on the host machine and configure `/etc/exports` to export the `/bac
 # /etc/exports
 /backup *(rw,sync,insecure,no_subtree_check,async,anonuid=1000,anongid=1000)
 ```
+
+### Tailscale
+
+Tailscale is a zero-config VPN that works on any device.
+
+```shell
+curl -fsSL https://tailscale.com/install.sh | sh # installs tailscale from package manager
+sudo tailscale up --advertise-exit-node # starts tailscale and logs in
+```
+
+Make sure to go to [machines](https://login.tailscale.com/admin/machines) and select `Disable key expiry` next to the device!
