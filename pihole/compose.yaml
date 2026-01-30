@@ -2,16 +2,7 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
-    ports:
-      # DNS Ports
-      - "53:53/tcp"
-      - "53:53/udp"
-      # Default HTTP Port
-      - "80:80/tcp"
-      # Default HTTPs Port. FTL will generate a self-signed certificate
-      - "443:443/tcp"
-      # DHCP server
-      - "67:67/udp"
+    network_mode: host # Required for DHCP https://docs.pi-hole.net/docker/dhcp/
     environment:
       # Set the appropriate timezone for your location (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones), e.g:
       TZ: "America/Chicago"
