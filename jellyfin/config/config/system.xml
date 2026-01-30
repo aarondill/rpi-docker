@@ -136,7 +136,7 @@
   <SaveMetadataHidden>false</SaveMetadataHidden>
   <ContentTypes />
   <RemoteClientBitrateLimit>0</RemoteClientBitrateLimit>
-  <EnableFolderView>true</EnableFolderView>
+  <EnableFolderView>false</EnableFolderView>
   <EnableGroupingMoviesIntoCollections>false</EnableGroupingMoviesIntoCollections>
   <EnableGroupingShowsIntoCollections>false</EnableGroupingShowsIntoCollections>
   <DisplaySpecialsWithinSeasons>true</DisplaySpecialsWithinSeasons>
