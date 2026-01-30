@@ -54,3 +54,10 @@ Then run `sudo exportfs -a` to export the directory.
 # /etc/exports
 /backup *(rw,sync,insecure,no_subtree_check,async,anonuid=1000,anongid=1000)
 ```
+
+### Important!
+
+Read extra setup in each directory's README.
+
+- [Pihole](./pihole/README.md)
+- [Tailscale](./tailscale/README.md)
