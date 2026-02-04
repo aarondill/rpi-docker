@@ -17,5 +17,5 @@ services:
       TS_STATE_DIR: "/var/lib/tailscale" # This gives us a persistent entry in TS Machines, rather than Epehmeral
       TS_USERSPACE: false # Bizarrely, even if you bind /dev/net/tun in, you still need to tell the image to not use userspace networking
       TS_AUTH_ONCE: false # If you have a config error somewhere, and this is set to true, it'll be really hard to figure it out
-      TS_EXTRA_ARGS: "--advertise-exit-node --advertise-routes 10.0.0.0/25"
+      TS_EXTRA_ARGS: "--reset --advertise-exit-node --advertise-routes 10.0.0.0/25"
       TS_TAILSCALED_EXTRA_ARGS: "--tun=tailscale0" # This is inexplicably required to make exit-node work
