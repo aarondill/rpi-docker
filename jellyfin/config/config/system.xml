@@ -29,15 +29,15 @@
     <string>a</string>
     <string>an</string>
   </SortRemoveWords>
-  <MinResumePct>5</MinResumePct>
-  <MaxResumePct>90</MaxResumePct>
-  <MinResumeDurationSeconds>300</MinResumeDurationSeconds>
+  <MinResumePct>3</MinResumePct>
+  <MaxResumePct>95</MaxResumePct>
+  <MinResumeDurationSeconds>180</MinResumeDurationSeconds>
   <MinAudiobookResume>5</MinAudiobookResume>
   <MaxAudiobookResume>5</MaxAudiobookResume>
   <InactiveSessionThreshold>0</InactiveSessionThreshold>
   <LibraryMonitorDelay>60</LibraryMonitorDelay>
   <LibraryUpdateDuration>30</LibraryUpdateDuration>
-  <CacheSize>800</CacheSize>
+  <CacheSize>400</CacheSize>
   <ImageSavingConvention>Legacy</ImageSavingConvention>
   <MetadataOptions>
     <MetadataOptions>
@@ -131,13 +131,13 @@
     </MetadataOptions>
   </MetadataOptions>
   <SkipDeserializationForBasicTypes>true</SkipDeserializationForBasicTypes>
-  <ServerName>c7107bfa5bcc</ServerName>
+  <ServerName>jellyfin</ServerName>
   <UICulture>en-US</UICulture>
   <SaveMetadataHidden>false</SaveMetadataHidden>
   <ContentTypes />
   <RemoteClientBitrateLimit>0</RemoteClientBitrateLimit>
   <EnableFolderView>false</EnableFolderView>
-  <EnableGroupingMoviesIntoCollections>false</EnableGroupingMoviesIntoCollections>
+  <EnableGroupingMoviesIntoCollections>true</EnableGroupingMoviesIntoCollections>
   <EnableGroupingShowsIntoCollections>false</EnableGroupingShowsIntoCollections>
   <DisplaySpecialsWithinSeasons>true</DisplaySpecialsWithinSeasons>
   <CodecsUsed />
