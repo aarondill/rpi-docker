@@ -1,4 +1,4 @@
-# Docker Pi
+# RPi Docker
 
 An attempt to containerize my Raspberry Pi setup.
 
