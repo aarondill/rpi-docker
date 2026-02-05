@@ -1,4 +1,4 @@
-# Pihole on docker
+# PiHole on docker
 
 ## Setup
 
@@ -7,6 +7,11 @@
 3. Run `docker-compose up -d`
 4. Open http://0.0.0.0/admin in your browser
 5. Import the teleporter zip file / setup blocklists
+
+## Back up
+
+The `./etc-pihole/` directory contains all the configuration files for PiHole.
+Alternatively, you can use the teleporter from the admin page to back up the entire configuration.
 
 ## Lists to add (possibly outdated)
 
@@ -36,3 +41,7 @@ www.goooooooooooooooooooooooooooooooooooooooooooooooooooooooooogle.com	Exact den
 time\..+	Regex allow Time Servers
 smart.link	Exact allow 7-eleven links
 ```
+
+## Tailscale
+
+See the README in the [tailscale-docker](https://github.com/aarondill/tailscale-docker) repo for instructions on how to set up tailscale with a PiHole as the DNS.
