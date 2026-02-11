@@ -60,5 +60,6 @@ Then run `sudo exportfs -a` to export the directory.
 
 Read extra setup in each directory's README.
 
-- [Pihole](./pihole/README.md)
-- [Tailscale](./tailscale/README.md)
+## See Also
+
+Enable wifi on startup: https://gist.github.com/aarondill/b0448c5482c706eb56b311caf1fdd261
