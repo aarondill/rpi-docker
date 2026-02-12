@@ -14,9 +14,11 @@ services:
       FTLCONF_ntp_ipv4_active: "false"
       FTLCONF_ntp_ipv6_active: "false"
       FTLCONF_ntp_sync_active: "false"
+      FTLCONF_ misc_etc_dnsmasq_d: true
     volumes:
       # For persisting Pi-hole's databases and common configuration file
       - "./etc-pihole:/etc/pihole"
+      - "./domain.conf:/etc/dnsmasq.d/domain.conf:ro"
     cap_add:
       # Required if you are using Pi-hole as your DHCP server, else not needed
       - NET_ADMIN
