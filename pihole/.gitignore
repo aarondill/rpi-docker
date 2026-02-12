@@ -1,3 +1,1 @@
 etc-pihole/*
-# The toml file is plain text (and shouldn't be changed much), so it's fine to include it in the repo.
-!etc-pihole/pihole.toml
