@@ -31,7 +31,7 @@ services:
       - SYS_NICE
     restart: unless-stopped
   tailscale-hack:
-    image: alpine
+    image: tailscale/tailscale:latest
     restart: unless-stopped
     network_mode: "host"
     privileged: true
