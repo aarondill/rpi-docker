@@ -14,10 +14,16 @@ services:
       FTLCONF_ntp_ipv4_active: "false"
       FTLCONF_ntp_ipv6_active: "false"
       FTLCONF_ntp_sync_active: "false"
-      FTLCONF_misc_dnsmasq_lines: "addn-hosts=/domain.list"
+      FTLCONF_misc_dnsmasq_lines: 'addn-hosts=/domain.list'
     volumes:
       - "./etc-pihole:/etc/pihole"
       - "./domain.list:/domain.list"
+    post_start:
+      # Set the subnet so that dnsmasq properly localises. This is a hack that is explicitly unsupported by Tailscale.
+      # Futhermore, when tailscale restarts, dnsmasq doesn't seem to grab the new netmask, so it keeps my intended mask.
+      # Note that if tailscale is started after pihole, this command will not fix the issue.
+      # See https://github.com/tailscale/tailscale/issues/7340
+      - command: sh -c 'ifconfig tailscale0 netmask 255.192.0.0 || true'
     cap_add:
       # Required if you are using Pi-hole as your DHCP server, else not needed
       - NET_ADMIN
