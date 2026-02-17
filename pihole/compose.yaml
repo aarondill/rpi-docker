@@ -14,7 +14,7 @@ services:
       FTLCONF_ntp_ipv4_active: "false"
       FTLCONF_ntp_ipv6_active: "false"
       FTLCONF_ntp_sync_active: "false"
-      FTLCONF_misc_dnsmasq_lines: 'addn-hosts=/domain.list'
+      FTLCONF_misc_dnsmasq_lines: "addn-hosts=/domain.list"
     volumes:
       - "./etc-pihole:/etc/pihole"
       - "./domain.list:/domain.list"
@@ -30,3 +30,11 @@ services:
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
     restart: unless-stopped
+  tailscale-hack:
+    image: alpine
+    restart: unless-stopped
+    network_mode: "host"
+    privileged: true
+    volumes:
+      - ./tailscale-hack.sh:/tailscale-hack.sh:ro
+    command: ./tailscale-hack.sh
