@@ -3,7 +3,7 @@
 10.0.0.3 dash.adill.dev
 10.0.0.3 files.adill.dev
 10.0.0.3 jellyfin.adill.dev
-10.0.0.3 jellyseerr.adill.dev
+10.0.0.3 seerr.adill.dev
 10.0.0.3 prowlarr.adill.dev
 10.0.0.3 qbittorrent.adill.dev
 10.0.0.3 radarr.adill.dev
@@ -13,7 +13,7 @@
 100.90.223.22 dash.adill.dev
 100.90.223.22 files.adill.dev
 100.90.223.22 jellyfin.adill.dev
-100.90.223.22 jellyseerr.adill.dev
+100.90.223.22 seerr.adill.dev
 100.90.223.22 prowlarr.adill.dev
 100.90.223.22 qbittorrent.adill.dev
 100.90.223.22 radarr.adill.dev
