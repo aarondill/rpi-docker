@@ -1,21 +1,23 @@
 # Duplicated to take advantage of --localise-queries
 10.0.0.3 bazarr.adill.dev
+10.0.0.3 cups.adill.dev
 10.0.0.3 dash.adill.dev
 10.0.0.3 files.adill.dev
 10.0.0.3 jellyfin.adill.dev
-10.0.0.3 seerr.adill.dev
 10.0.0.3 prowlarr.adill.dev
 10.0.0.3 qbittorrent.adill.dev
 10.0.0.3 radarr.adill.dev
+10.0.0.3 seerr.adill.dev
 10.0.0.3 sonarr.adill.dev
 10.0.0.3 whoami.adill.dev
 100.90.223.22 bazarr.adill.dev
+100.90.223.22 cups.adill.dev
 100.90.223.22 dash.adill.dev
 100.90.223.22 files.adill.dev
 100.90.223.22 jellyfin.adill.dev
-100.90.223.22 seerr.adill.dev
 100.90.223.22 prowlarr.adill.dev
 100.90.223.22 qbittorrent.adill.dev
 100.90.223.22 radarr.adill.dev
+100.90.223.22 seerr.adill.dev
 100.90.223.22 sonarr.adill.dev
 100.90.223.22 whoami.adill.dev
