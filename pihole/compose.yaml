@@ -22,11 +22,3 @@ services:
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
     restart: unless-stopped
-  tailscale-hack:
-    image: tailscale/tailscale:latest
-    restart: unless-stopped
-    network_mode: "host"
-    privileged: true
-    volumes:
-      - ./tailscale-hack.sh:/tailscale-hack.sh:ro
-    command: ./tailscale-hack.sh
