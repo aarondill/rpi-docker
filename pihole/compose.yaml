@@ -22,3 +22,14 @@ services:
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
     restart: unless-stopped
+  pihole-sync:
+    container_name: pihole-sync
+    network_mode: service:pihole
+    build: ./sync
+    volumes:
+      - ./config.json:/config.json
+    environment:
+      PIHOLE_API: http://pi.hole/api
+      # May be empty (if no auth), or set to the application password
+      PIHOLE_PASSWORD: ""
+    restart: unless-stopped
