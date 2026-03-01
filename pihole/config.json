@@ -1,0 +1,55 @@
+{
+  "domains": {
+    "allow": [
+      {
+        "comment": "apclassrom",
+        "domain": "^.*\\.split\\.io$",
+        "kind": "regex"
+      },
+      {
+        "comment": "7 Eleven",
+        "domain": "smart.link",
+        "kind": "exact"
+      },
+      {
+        "comment": "ntp",
+        "domain": "time\\..+",
+        "kind": "regex"
+      },
+      {
+        "comment": "Google Search Ad Links",
+        "domain": "www.googleadservices.com",
+        "kind": "exact"
+      }
+    ],
+    "deny": [
+      {
+        "comment": "Netgear Phone Home",
+        "domain": "peernetwork.netgear.com",
+        "kind": "exact"
+      },
+      {
+        "comment": null,
+        "domain": "www.goooooooooooooooooooooooooooooooooooooooooooooooooooooooooogle.com",
+        "kind": "exact"
+      }
+    ]
+  },
+  "lists": {
+    "allow": [
+      "https://raw.githubusercontent.com/GoodnessJSON/PiHole-Whitelist/master/lists/whitelist.txt"
+    ],
+    "block": [
+      "https://adaway.org/hosts.txt",
+      "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts",
+      "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts",
+      "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt",
+      "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+      "https://v.firebog.net/hosts/AdguardDNS.txt",
+      "https://v.firebog.net/hosts/Admiral.txt",
+      "https://v.firebog.net/hosts/Easylist.txt",
+      "https://v.firebog.net/hosts/static/w3kbl.txt"
+    ]
+  }
+}
